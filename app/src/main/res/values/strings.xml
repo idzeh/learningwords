@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LearningWords</string>
+    <string name="create_topic_text">Create topic</string>
+</resources>
