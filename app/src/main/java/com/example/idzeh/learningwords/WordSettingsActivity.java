@@ -1,5 +1,7 @@
 package com.example.idzeh.learningwords;
-
+/*
+класс для редактирования слова
+ */
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,8 +29,8 @@ public class WordSettingsActivity extends AppCompatActivity {
         final Context  ctx = this;
 
         if (wordId == -1){
-            englishTranslateView.setText("English translation");
-            russianTranslateView.setText("Русский перевод");
+            englishTranslateView.setText("");
+            russianTranslateView.setText("");
         }else{
             englishTranslateView.setText(word.getEnglish());
             russianTranslateView.setText(word.getRussian());
@@ -38,7 +40,7 @@ public class WordSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DB.updateWord(ctx, new Word(wordId, topicId, russianTranslateView.getText().toString(), englishTranslateView.getText().toString()));
-                Intent intent = new Intent(WordSettingsActivity.this, TopicSettingsActivity.class);
+                Intent intent = new Intent(WordSettingsActivity.this, WordsListActivity.class);
                 b.putInt("topic_id", topicId);
                 intent.putExtras(b);
                 finish();
@@ -50,7 +52,7 @@ public class WordSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DB.deleteWord(ctx, wordId);
-                Intent intent = new Intent(WordSettingsActivity.this, TopicSettingsActivity.class);
+                Intent intent = new Intent(WordSettingsActivity.this, WordsListActivity.class);
                 b.putInt("topic_id", topicId);
                 intent.putExtras(b);
                 finish();

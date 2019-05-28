@@ -1,5 +1,7 @@
 package com.example.idzeh.learningwords;
-
+/*
+модель слова для запоминания
+ */
 public class Word {
     private int parentId, id;
     private String russian, english;

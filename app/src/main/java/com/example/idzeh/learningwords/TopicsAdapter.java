@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.*;
-
+/*
+класс адаптера для топика
+ */
 public class TopicsAdapter extends ArrayAdapter<Topic>{
     ArrayList<Topic> topics = null;
     Context context;

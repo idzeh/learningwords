@@ -10,7 +10,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-
+/*
+класс для режима тренировки
+ */
 public class TrainCardsActivity extends AppCompatActivity {
     ArrayList<Word> words;
     int topicId;

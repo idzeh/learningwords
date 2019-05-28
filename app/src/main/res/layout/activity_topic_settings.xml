@@ -2,77 +2,94 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
     android:focusableInTouchMode="true"
+    android:orientation="vertical"
     tools:context=".TopicSettingsActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <EditText
+        android:id="@+id/topic_name_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Enter topic name here"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/toWordsListButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Words List"
+        app:layout_constraintTop_toBottomOf="@+id/topic_name_input"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/startCardsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Start training Cards"
+        app:layout_constraintTop_toBottomOf="@+id/toWordsListButton"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/startTestButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Start training Test"
+        app:layout_constraintTop_toBottomOf="@+id/startCardsButton"
+        tools:layout_editor_absoluteX="0dp" />
 
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <EditText
-                android:id="@+id/topic_name_input"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:text="Enter topic name here"/>
+    <Button
+        android:id="@+id/deleteTopicButton"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Delete topic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@+id/toMainButton"
+        app:layout_constraintTop_toBottomOf="@+id/startTestButton"
+        app:layout_constraintVertical_bias="1.0" />
 
-            <Button
-                android:id="@+id/addWordButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_light"
-                android:text="Add new word"
-                app:layout_constraintTop_toBottomOf="@+id/topic_name_input" />
-
-            <Button
-                android:id="@+id/startCardsButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_light"
-                android:text="Start training Cards"
-                app:layout_constraintTop_toBottomOf="@+id/addWordButton" />
-
-            <Button
-                android:id="@+id/startTestButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_light"
-                android:text="Start training Test"
-                app:layout_constraintTop_toBottomOf="@+id/startCardsButton" />
+    <Button
+        android:id="@+id/toMainButton"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Main menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTestButton"
+        app:layout_constraintVertical_bias="1.0" />
 
 
-            <ListView
-                android:id="@+id/words_list_view"
-                android:layout_width="match_parent"
-                android:layout_height="254dp"
-                android:isScrollContainer="false"></ListView>
-
-            <Button
-                android:id="@+id/deleteTopicButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_red_dark"
-                android:text="Delete topic"
-                app:layout_constraintTop_toBottomOf="@+id/words_list_view" />
-            <Button
-                android:id="@+id/toMainButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
-                android:text="Main menu"
-                app:layout_constraintTop_toBottomOf="@+id/deleteTopicButton" />
-        </LinearLayout>
-    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

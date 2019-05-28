@@ -7,7 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.*;
 import android.content.ContentValues;
 import android.util.Log;
-
+/*
+класс с методами для работы с БД
+ */
 public class DB{
 
     public static ArrayList<Word> words;

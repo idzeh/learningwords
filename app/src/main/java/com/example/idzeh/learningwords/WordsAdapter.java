@@ -1,5 +1,7 @@
 package com.example.idzeh.learningwords;
-
+/*
+адаптер для слова
+ */
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

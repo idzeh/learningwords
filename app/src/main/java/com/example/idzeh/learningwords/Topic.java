@@ -1,5 +1,7 @@
 package com.example.idzeh.learningwords;
-
+/*
+модель топика
+ */
 public class Topic {
     public int id;
     public String name;
